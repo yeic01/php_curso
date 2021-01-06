@@ -1,0 +1,44 @@
+{% set nombre = 'Jacob Nupia'%}
+{% set curso = 'drupal'%}
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mi primer pagina en twig</title>
+  </head>
+  <body>
+    {% include 'menu.html.twig'%}
+
+  <hr>
+    <h1>Hola {{name}}</h1>
+
+
+
+    <!--
+    {#{% declaraciones logicas, creación de variables arreglos, condicionales, loops, bloques %}#}
+    {#{{imprimir valores } }#}
+    {# Comentarios twig #}
+
+    -->
+
+
+
+    <div class="">
+    <p>{{nombre}}<span> {{curso}}</span></p>
+
+    </div>
+
+    <hr>
+    <ul>
+      {% for person in personas %}
+        <ul>{{ person | upper | striptags }}</ul>
+      {% endfor %}
+    </ul>
+    {% if cursoTerminado  %}
+    <span>Este curso no ha terminado</span>
+  {% else %}
+    <span>Este curso ha terminado</span>
+  {% endif %}
+
+  </body>
+</html>
